@@ -20,4 +20,6 @@
 
   <bean id="auditorium" class="com.springinaction.springidol.Auditorium" />
 
+  <bean id="kenny" class="com.springinaction.springidol.Instrumentalist" />
+
 </beans>
