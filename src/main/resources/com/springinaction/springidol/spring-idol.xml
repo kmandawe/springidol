@@ -20,8 +20,5 @@
 
   <bean id="auditorium" class="com.springinaction.springidol.Auditorium" />
 
-  <bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
-    <property name="song" value="Jingle Bells" />
-  </bean>
 
 </beans>

@@ -9,7 +9,8 @@ public class SpringIdolMain {
     AbstractApplicationContext ctx =
         new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
     ctx.registerShutdownHook();
-    Instrumentalist kenny = (Instrumentalist) ctx.getBean("kenny");
-    kenny.perform();
+
+
+
   }
 }
