@@ -4,18 +4,21 @@
   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
 
   <bean id="duke" class="com.springinaction.springidol.Juggler">
-    <constructor-arg value="15" />
+    <constructor-arg value="15"/>
   </bean>
 
-  <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29" />
+  <bean id="sonnet29" class="com.springinaction.springidol.Sonnet29"/>
 
   <bean id="poeticDuke" class="com.springinaction.springidol.PoeticJuggler">
-    <constructor-arg value="15" />
-    <constructor-arg ref="sonnet29" />
+    <constructor-arg value="15"/>
+    <constructor-arg ref="sonnet29"/>
   </bean>
 
   <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
 
-  <bean id="ticket" class="com.springinaction.springidol.Ticket" />
+  <bean id="ticket" class="com.springinaction.springidol.Ticket"/>
+
+  <bean id="auditorium" class="com.springinaction.springidol.Auditorium" init-method="turnOnLights"
+    destroy-method="turnOffLights"/>
 
 </beans>
