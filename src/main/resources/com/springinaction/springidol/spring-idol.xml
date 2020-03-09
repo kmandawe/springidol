@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd" default-init-method="turnOnLights" default-destroy-method="turnOffLights">
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd"
+  default-init-method="turnOnLights" default-destroy-method="turnOffLights">
 
   <bean id="duke" class="com.springinaction.springidol.Juggler">
     <constructor-arg value="15"/>
@@ -18,7 +19,13 @@
 
   <bean id="ticket" class="com.springinaction.springidol.Ticket"/>
 
-  <bean id="auditorium" class="com.springinaction.springidol.Auditorium" />
+  <bean id="auditorium" class="com.springinaction.springidol.Auditorium"/>
 
+  <bean id="saxophone" class="com.springinaction.springidol.Saxophone"/>
+
+  <bean id="kenny" class="com.springinaction.springidol.Instrumentalist">
+    <property name="song" value="Jingle Bells"/>
+    <property name="instrument" ref="saxophone"/>
+  </bean>
 
 </beans>

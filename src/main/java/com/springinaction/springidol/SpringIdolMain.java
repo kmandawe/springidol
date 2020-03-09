@@ -10,7 +10,7 @@ public class SpringIdolMain {
         new ClassPathXmlApplicationContext("com/springinaction/springidol/spring-idol.xml");
     ctx.registerShutdownHook();
 
-
-
+    Performer performer = (Performer) ctx.getBean("kenny");
+    performer.perform();
   }
 }
