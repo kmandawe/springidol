@@ -16,4 +16,6 @@
 
   <bean id="theStage" class="com.springinaction.springidol.Stage" factory-method="getInstance"/>
 
+  <bean id="ticket" class="com.springinaction.springidol.Ticket" />
+
 </beans>
