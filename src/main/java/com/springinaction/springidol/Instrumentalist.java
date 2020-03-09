@@ -1,18 +1,19 @@
-//<start id="instrumentalist_java" /> 
 package com.springinaction.springidol;
 
 public class Instrumentalist implements Performer {
-  public Instrumentalist() {
-  }
 
+  private String song;
+  private Instrument instrument;
+
+  public Instrumentalist() {}
+
+  @Override
   public void perform() throws PerformanceException {
     System.out.print("Playing " + song + " : ");
     instrument.play();
   }
 
-  private String song;
-
-  public void setSong(String song) { //<co id="co_injectSong"/>
+  public void setSong(String song) {
     this.song = song;
   }
 
@@ -24,10 +25,7 @@ public class Instrumentalist implements Performer {
     return song;
   }
 
-  private Instrument instrument;
-
-  public void setInstrument(Instrument instrument) { //<co id="co_injectInstrument"/>
+  public void setInstrument(Instrument instrument) {
     this.instrument = instrument;
   }
 }
-//<end id="instrumentalist_java" />
